@@ -52,8 +52,8 @@ dates, values = read_from_file (file)
 previd = 0
 for d in refdates:
     if d in dates:
-        print d
         previd = dates.index(d)
+        print d, values[previd]
     else:
-        print d, previd
+        print d, values[previd]
 
