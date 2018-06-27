@@ -49,3 +49,11 @@ file = sys.argv[2]
 refdates, refvalues = read_from_file (fileorig)
 dates, values = read_from_file (file)
 
+previd = 0
+for d in refdates:
+    if d in dates:
+        print d
+        previd = dates.index(d)
+    else:
+        print d, previd
+
