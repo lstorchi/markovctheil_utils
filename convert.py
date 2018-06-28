@@ -10,5 +10,5 @@ file = sys.argv[1]
 dates, values = basicutil.read_from_file (file)
 
 for i in range(len(dates)):
-    print dates[i], " , ", values[i], " , 0"
+    print dates[i], " , ", values[i]
 

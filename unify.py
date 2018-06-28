@@ -15,7 +15,7 @@ previd = 0
 for d in refdates:
     if d in dates:
         previd = dates.index(d)
-        print d, " , ", values[previd], " , 0"
+        print d, " , ", values[previd]
     else:
-        print d, " , ", values[previd], " , 1"
+        print d, " , ", values[previd]
 
