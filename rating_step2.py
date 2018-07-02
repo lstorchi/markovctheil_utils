@@ -44,6 +44,6 @@ for i in range(1, len(dates)):
     d1 = dates[i - 1]
     d2 = dates[i]
     delta = d2 - d1
-    print delta.days
+    #print delta.days
     for j in range(-1 * delta.days):
-        print d1 - datetime.timedelta(j), ratings[i - 1]
+        print d1 - datetime.timedelta(j), " , ", ratings[i - 1]
