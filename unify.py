@@ -17,5 +17,8 @@ for d in refdates:
         previd = dates.index(d)
         print d, " , ", values[previd]
     else:
+        previd = previd + 1
+        if (previd == len(values)):
+            previd = len(values) - 1
         print d, " , ", values[previd]
 
