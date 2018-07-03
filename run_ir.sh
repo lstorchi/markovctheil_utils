@@ -2,3 +2,5 @@ for name in Germany Austria Belgium Bulgaria Croatia Czech_Republic Denmark Finl
 do 
    python ./unify.py ./Portugal.csv ./"$name".csv > "$name"_ref.csv
 done
+
+python convert.py ./Portugal.csv > ./Portugal_ref.csv
