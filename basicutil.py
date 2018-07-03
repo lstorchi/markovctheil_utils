@@ -1,7 +1,11 @@
+import datetime
+import calendar
 
 def read_from_file (filename):
     dates = []
     values = []
+
+    nametonum = dict((v,k) for k,v in enumerate(calendar.month_abbr))
 
     fp = open(filename)
     fp.readline()
@@ -22,13 +26,15 @@ def read_from_file (filename):
             print datasplit
             exit(1)
         
-        day = int(datasplit[1])
-        month = datasplit[0]
-    
-        year = int(sline[1])
+        d = int(datasplit[1])
+        m = nametonum[datasplit[0]]
+        y = int(sline[1])
+
+        da = datetime.date(y, m, d)
+
         data = float(sline[2])
     
-        dates.append(str(day)+"_"+month+"_"+str(year))
+        dates.append(da)
         values.append(data)
     
     fp.close()

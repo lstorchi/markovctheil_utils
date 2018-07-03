@@ -1,4 +1,5 @@
 import sys
+import datetime
 import basicutil
 
 if len(sys.argv) != 3:
@@ -17,8 +18,15 @@ for d in refdates:
         previd = dates.index(d)
         print d, " , ", values[previd]
     else:
-        previd = previd + 1
-        if (previd == len(values)):
-            previd = len(values) - 1
+        j = 1
+        while True: 
+          pd = d - datetime.timedelta(j)
+          if pd in dates:
+              previd = dates.index(pd)
+              break;
+          j = j + 1
+
+        #print j
+
         print d, " , ", values[previd]
 
