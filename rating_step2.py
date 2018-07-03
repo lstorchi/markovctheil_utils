@@ -23,8 +23,8 @@ for line in fp:
         print "Error in file format"
         exit(1)
 
-    date = re.sub('[^ a-zA-Z0-9]', '', sline[3])
-    rating = re.sub('[^ a-zA-Z0-9]', '', sline[1])
+    date = re.sub('[^ a-zA-Z0-9+\-]', '', sline[3])
+    rating = re.sub('[^ a-zA-Z0-9+\-]', '', sline[1])
 
     sdate = date.split()
 

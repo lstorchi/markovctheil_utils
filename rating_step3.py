@@ -32,7 +32,7 @@ nametonum = dict((v,k) for k,v in enumerate(calendar.month_abbr))
 refdates = []
 fp = open(datesfile)
 for line in fp:
-    date = re.sub('[^ a-zA-Z0-9]', '', line)
+    date = re.sub('[^ a-zA-Z0-9+\-]', '', line)
 
     sdate = date.split()
 
@@ -54,7 +54,7 @@ for line in fp:
     sline = line.split(",")
 
     date = sline[0]
-    rating =  re.sub('[^ a-zA-Z0-9]', '', sline[1])
+    rating =  re.sub('[^ a-zA-Z0-9+\-]', '', sline[1])
 
     sdate = date.split("-")
 
