@@ -43,6 +43,18 @@ fp.close()
 for i in range(1, len(dates)):
     d1 = dates[i - 1]
     d2 = dates[i]
+    #print d1, d2
     delta = d2 - d1
     for j in range(delta.days):
-        print d1 + datetime.timedelta(j), " , ", ratings[i - 1]
+         print d1 + datetime.timedelta(j), " , ", ratings[i - 1]
+
+d = 26
+m = 6
+y = 2018
+
+fd = datetime.date(y, m, d)
+sd = dates[len(dates) - 1]
+fr = ratings[len(dates) - 1]
+delta = fd - sd
+for j in range(delta.days):
+    print sd + datetime.timedelta(j), " , ", fr
