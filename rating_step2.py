@@ -58,3 +58,4 @@ fr = ratings[len(dates) - 1]
 delta = fd - sd
 for j in range(delta.days):
     print sd + datetime.timedelta(j), " , ", fr
+print fd, " , ", fr
