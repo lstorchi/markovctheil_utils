@@ -32,8 +32,13 @@ if __name__ == "__main__" :
         exit(1)
     
     m = scipy.io.loadmat(filename)
+
+    howmany = 0
+    for name in m.iterkeys():
+        if (isinstance( m[name],(numpy.ndarray))):
+            howmany += 1
     
-    print len(m.keys())
+    print howmany
 
     for name in m.iterkeys():
         if (isinstance( m[name],(numpy.ndarray))):
